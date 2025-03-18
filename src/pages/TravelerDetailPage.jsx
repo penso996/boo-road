@@ -1,27 +1,35 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { TravelsContext } from "../contexts/TravelsContext";
-import { Link } from "react-router-dom";
+import TravelersContext from "../contexts/TravelsContext";
+import TripCard from "../components/TripCard";
 
 export default function TravelerDetailPage() {
     const { id } = useParams();
-    const { travels } = useContext(TravelsContext);
+    const { travelers } = useContext(TravelersContext);
 
-    const traveler = travels
-        .flatMap(travel => travel.travelers)
-        .find(traveler => traveler.id === parseInt(id));
+    // Trova il viaggiatore selezionato
+    const traveler = travelers.find(traveler => traveler.id === parseInt(id));
 
-    if (!traveler) {
-        return <p>Viaggiatore non trovato.</p>;
-    }
+    // Funzione per il rendering dei viaggi a cui partecipa
+    const renderTrips = () => (
+        traveler.trips?.map(trip => (
+            <TripCard
+                key={trip.id}
+                id={trip.id}
+                destination={trip.destination}
+                startDate={trip.startDate}
+                endDate={trip.endDate}
+            />
+        ))
+    );
 
     return (
-        <div className="traveler-detail">
+        <div>
             <h1>{traveler.name} {traveler.surname}</h1>
-            <p><strong>Email:</strong> {traveler.email}</p>
-            <p><strong>Telefono:</strong> {traveler.phone}</p>
-            <p><strong>Codice Fiscale:</strong> {traveler.fiscalCode}</p>
-            <Link to="/">Torna alla Home</Link>
+            <h2>Viaggi associati</h2>
+            <div>
+                {renderTrips()}
+            </div>
         </div>
     );
 }
