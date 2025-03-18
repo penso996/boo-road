@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import TravelsContext from "../context/TravelsContext";
+import TravelsContext from "../contexts/TravelsContext";
 import TripCard from "../components/TripCard";
 
 
