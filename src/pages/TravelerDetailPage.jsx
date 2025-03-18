@@ -8,7 +8,7 @@ export default function TravelerDetailPage() {
     const { travels } = useContext(TravelsContext);
 
     const traveler = travels
-        .flatMap(travel => travel.travelers) 
+        .flatMap(travel => travel.travelers)
         .find(traveler => traveler.id === parseInt(id));
 
     if (!traveler) {
