@@ -11,7 +11,7 @@ export default function TripCard({ id, destination, startDate, endDate }) {
                 <p>Inizio: {startDate}</p>
                 <p>Fine: {endDate}</p>
             </div>
-            <Link to={`/trip/${id}`}>Dettagli</Link>
+            <Link className='trip-button' to={`/trip/${id}`}>Dettagli</Link>
         </div>
     );
 }
