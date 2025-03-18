@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import TravelsContext from "../contexts/TravelsContext";
 import TravelerCard from "../components/TravelerCard";
+import SearchBar from "../components/SearchBar";
 
 export default function TripDetail() {
     const { id } = useParams();
@@ -29,6 +30,7 @@ export default function TripDetail() {
             <h1>{trip.destination}</h1>
             <p>Dal {trip.startDate} al {trip.endDate}</p>
             <h2>Partecipanti</h2>
+            <SearchBar />
             <div>
                 {renderTravelers()}
             </div>
