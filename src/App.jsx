@@ -10,6 +10,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage"
 import TripDetailPage from "./pages/TripDetailPage"
 import TravelerDetailPage from "./pages/TravelerDetailPage"
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
             <Route index path="/" element={<HomePage />} />
             <Route path="/trip/:id" element={<TripDetailPage />} />
             <Route path="/traveler/:id" element={<TravelerDetailPage />} />
+            {/* route 404 not found */}
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
