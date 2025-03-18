@@ -4,7 +4,7 @@
 import { Outlet } from "react-router-dom";
 
 // Import page_main_components
-import Header from "../page_main_components/Header";
+import Header from "../components/Header";
 
 export default function DefaultLayout() {
 

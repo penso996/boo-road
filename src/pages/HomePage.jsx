@@ -1,5 +1,5 @@
 import TripCard from "../components/TripCard";
-import TravelsContext from "../context/TravelsContext";
+import TravelsContext from "../contexts/TravelsContext";
 import { useContext } from "react";
 
 export default function HomePage() {
