@@ -9,6 +9,15 @@
   box-sizing: border-box;
 }
 
+/* <main> rule */
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+  min-height: calc(100vh - 120px);
+}
+
 /* HEADER */
 header {
   height: 120px;
@@ -17,7 +26,6 @@ header {
   justify-content: center;
   background: linear-gradient(135deg, #d4edda, #f8f9fa);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
 }
 
 header img {
@@ -27,6 +35,10 @@ header img {
 
 /* HEADER RESPONSIVE */
 @media (max-width: 768px) {
+  main {
+    min-height: calc(100vh - 100px);
+  }
+
   header {
     height: 100px;
   }
@@ -37,6 +49,10 @@ header img {
 }
 
 @media (max-width: 480px) {
+  main {
+    min-height: calc(100vh - 80px);
+  }
+
   header {
     height: 80px;
   }
@@ -44,4 +60,19 @@ header img {
   header img {
     height: 50px;
   }
+}
+
+/* PAGES RULES */
+/* HomePage.jsx */
+.trips-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trips h1 {
+  text-align: center;
+  color: #3D9970;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }

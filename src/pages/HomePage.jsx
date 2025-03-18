@@ -26,11 +26,11 @@ export default function HomePage() {
 
     // RENDER
     return (
-        <div>
-            <h1>Viaggi</h1>
-            <div>
+        <main>
+            <div className="trips-container">
+                <h1>Viaggi</h1>
                 {renderTrips()}
             </div>
-        </div>
+        </main>
     );
 }
