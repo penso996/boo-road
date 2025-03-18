@@ -13,7 +13,7 @@ import travels from "./data/travels";
 // Import pages
 import HomePage from "./pages/HomePage"
 import TripDetailPage from "./pages/TripDetailPage"
-// import TravelerDetailPage from "./pages/TravelerDetailPage"
+import TravelerDetailPage from "./pages/TravelerDetailPage"
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             {/* HomePage */}
             <Route index path="/" element={<HomePage />} />
             <Route path="/travel/:id" element={<TripDetailPage />} />
-            {/* <Route path="/traveler/:id" element={<TravelerDetailPage />} /> */}
+            <Route path="/traveler/:id" element={<TravelerDetailPage />} />
             {/* NotFound */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
