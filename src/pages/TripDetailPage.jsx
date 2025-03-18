@@ -49,24 +49,26 @@ export default function TripDetail() {
 
     // RENDER
     return (
-        <div>
-            <h1>{trip?.destination}</h1>
-            <p>Dal {trip?.startDate} al {trip?.endDate}</p>
-            <h2>Partecipanti</h2>
+        <main>
+            <div className="trip-page">
+                <h1>{trip?.destination}</h1>
+                <p>Dal {trip?.startDate} al {trip?.endDate}</p>
+                <h2>Partecipanti</h2>
 
-            {/* searchbar */}
-            <div>
-                <input
-                    type="text"
-                    value={query}
-                    onChange={(e) => handleSearch(e.target.value)}
-                    placeholder="Cerca un partecipante..."
-                />
-            </div>
+                {/* searchbar */}
+                <div className="searchbar">
+                    <input
+                        type="text"
+                        value={query}
+                        onChange={(e) => handleSearch(e.target.value)}
+                        placeholder="Cerca un partecipante..."
+                    />
+                </div>
 
-            <div>
-                {renderTravelers()}
+                <div>
+                    {renderTravelers()}
+                </div>
             </div>
-        </div>
+        </main>
     );
 }
