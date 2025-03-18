@@ -12,8 +12,9 @@ import travels from "./data/travels";
 
 // Import pages
 import HomePage from "./pages/HomePage"
+import TripDetailPage from "./pages/TripDetailPage"
 // import TravelerDetailPage from "./pages/TravelerDetailPage"
-// import TripDetailPage from "./pages/TripDetailPage"
+
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             {/* HomePage */}
             <Route index path="/" element={<HomePage />} />
-            {/* <Route path="t" element={<MovieDetail />} /> */}
+            <Route path="/travel/:id" element={<TripDetailPage />} />
             {/* NotFound */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
