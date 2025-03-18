@@ -9,13 +9,19 @@
   box-sizing: border-box;
 }
 
-/* <main> rule */
+/* <main> rules */
 main {
   padding: 20px;
   display: flex;
   justify-content: center;
   background: linear-gradient(135deg, #f3e7e9, #e3eeff);
   min-height: calc(100vh - 120px);
+}
+
+/* a rules */
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* HEADER */
@@ -71,8 +77,19 @@ header img {
   justify-content: center;
 }
 
-.trips h1 {
+.trips-container h1 {
   text-align: center;
   color: #3D9970;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* TripCard.jsx */
+.trip-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px black;
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 5px;
 }

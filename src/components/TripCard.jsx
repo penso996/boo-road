@@ -5,10 +5,12 @@ export default function TripCard({ id, destination, startDate, endDate }) {
 
     // RENDER
     return (
-        <div>
-            <h2>{destination}</h2>
-            <p>Inizio: {startDate}</p>
-            <p>Fine: {endDate}</p>
+        <div className="trip-card">
+            <div>
+                <h2>{destination}</h2>
+                <p>Inizio: {startDate}</p>
+                <p>Fine: {endDate}</p>
+            </div>
             <Link to={`/trip/${id}`}>Dettagli</Link>
         </div>
     );
