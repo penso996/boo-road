@@ -8,3 +8,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* HEADER */
+header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4edda, #f8f9fa);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+header img {
+  height: 80px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+/* HEADER RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    height: 100px;
+  }
+
+  header img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 80px;
+  }
+
+  header img {
+    height: 50px;
+  }
+}

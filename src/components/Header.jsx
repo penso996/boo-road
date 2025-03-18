@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 
 const Header = () => {
     return (
-        <Link to="/">BOOROAD-LOGO</Link>
+        <header>
+            <Link to="/"><img src="./public/BuRoad SVG-01.svg" alt="booroad logo" /></Link>
+        </header>
     )
 }
 
