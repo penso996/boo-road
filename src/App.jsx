@@ -28,6 +28,7 @@ function App() {
             {/* HomePage */}
             <Route index path="/" element={<HomePage />} />
             <Route path="/travel/:id" element={<TripDetailPage />} />
+            {/* <Route path="/traveler/:id" element={<TravelerDetailPage />} /> */}
             {/* NotFound */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
