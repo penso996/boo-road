@@ -1,12 +1,15 @@
 // Import functions from React
 import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Import context
 import GlobalContext from "../contexts/GlobalContext";
 
 export default function TravelerDetail() {
+
+    // useNaviage to go back
+    const navigate = useNavigate();
 
     const { trips } = useContext(GlobalContext);
     // Read URL from ID
@@ -34,7 +37,7 @@ export default function TravelerDetail() {
                 <p>Email: <b>{traveler.email}</b></p>
                 <p>Telefono: <b>{traveler.phone}</b></p>
                 <p>Codice Fiscale: <b>{traveler.fiscalCode}</b></p>
-                <Link className='trip-button' to={`/trip/${id}`}>Dettagli</Link>
+                <a className="back-button" onClick={() => navigate(-1)}>Indietro</a>
             </div>
         </main>
     );
