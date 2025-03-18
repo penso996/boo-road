@@ -5,9 +5,9 @@ export default function TravelerCard({ id, name, surname }) {
 
   // RENDER
   return (
-    <div>
+    <div className='traveler-card'>
       <h3>{name} {surname}</h3>
-      <Link to={`/traveler/${id}`}>Dettagli</Link>
+      <Link className="button" to={`/traveler/${id}`}>Dettagli</Link>
     </div>
   );
 }
