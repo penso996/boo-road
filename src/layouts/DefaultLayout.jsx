@@ -1,5 +1,3 @@
-// DefaultLayout.jsx
-
 // Import functions from React
 import { Outlet } from "react-router-dom";
 

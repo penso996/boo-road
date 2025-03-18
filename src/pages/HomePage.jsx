@@ -1,28 +1,35 @@
-import TripCard from "../components/TripCard";
-import TravelsContext from "../contexts/TravelsContext";
+// Import functions from React
 import { useContext } from "react";
 
-export default function HomePage() {
-    const { travels } = useContext(TravelsContext);
+// Import context
+import GlobalContext from "../contexts/GlobalContext";
 
-    // funzione rendering card trips
-    const renderTravels = () => {
-        return travels.map(travel => (
+// Import components
+import TripCard from "../components/TripCard";
+
+export default function HomePage() {
+
+    const { trips } = useContext(GlobalContext);
+
+    // FUNCTION to render TripCards
+    const renderTrips = () => {
+        return trips.map(trip => (
             <TripCard
-                key={travel.id}
-                id={travel.id}
-                destination={travel.destination}
-                startDate={travel.startDate}
-                endDate={travel.endDate}
+                key={trip.id}
+                id={trip.id}
+                destination={trip.destination}
+                startDate={trip.startDate}
+                endDate={trip.endDate}
             />
         ));
     };
 
+    // RENDER
     return (
-        <div className="home-page">
+        <div>
             <h1>Viaggi</h1>
-            <div className="trips-container">
-                {renderTravels()}
+            <div>
+                {renderTrips()}
             </div>
         </div>
     );

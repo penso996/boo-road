@@ -1,30 +1,27 @@
+// Import functions from React
 import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
-import TravelsContext from "../contexts/TravelsContext";
+
+// Import context
+import GlobalContext from "../contexts/GlobalContext";
+
+// Import components
 import TravelerCard from "../components/TravelerCard";
 
 export default function TripDetail() {
+
+    const { trips } = useContext(GlobalContext);
+    // Read URL from ID
     const { id } = useParams();
-    const { travels } = useContext(TravelsContext);
 
-    // Trova il viaggio selezionato
-    const trip = travels.find(travel => travel.id === parseInt(id));
+    // Find a trip by URL id  
+    const trip = trips.find(trip => trip.id === parseInt(id));
 
-    // Stato per la ricerca dei partecipanti
-    const [query, setQuery] = useState('');
+    // Searchbar from query
+    const [query, setQuery] = useState("");
     const [filteredTravelers, setFilteredTravelers] = useState(trip?.travelers || []);
 
-    // Funzione per il filtraggio dei partecipanti in base alla query
-    const handleSearch = (searchQuery) => {
-        setQuery(searchQuery);
-        setFilteredTravelers(
-            trip?.travelers?.filter(traveler =>
-                `${traveler.name} ${traveler.surname}`.toLowerCase().includes(searchQuery.toLowerCase())
-            ) || []
-        );
-    };
-
-    // Funzione per il rendering dei partecipanti
+    // FUNCTION to render travelers
     const renderTravelers = () => (
         filteredTravelers.map(traveler => (
             <TravelerCard
@@ -36,18 +33,28 @@ export default function TripDetail() {
         ))
     );
 
-    // Effetto per aggiornare la lista dei partecipanti quando cambia il viaggio
+    // FUNCTION for searchbar
+    const handleSearch = (searchQuery) => {
+        setQuery(searchQuery);
+        setFilteredTravelers(
+            trip?.travelers?.filter(traveler =>
+                `${traveler.name} ${traveler.surname}`.toLowerCase().includes(searchQuery.toLowerCase())
+            ) || []
+        );
+    };
+
     useEffect(() => {
         setFilteredTravelers(trip?.travelers || []);
     }, [trip]);
 
+    // RENDER
     return (
         <div>
             <h1>{trip?.destination}</h1>
             <p>Dal {trip?.startDate} al {trip?.endDate}</p>
             <h2>Partecipanti</h2>
 
-            {/* Barra di ricerca per i partecipanti */}
+            {/* searchbar */}
             <div className="searchbar-wrapper">
                 <input
                     type="text"

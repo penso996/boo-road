@@ -1,41 +1,33 @@
-// App.jsx
-
 // Import functions from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-// Import page_layout
-import DefaultLayout from "./layouts/DefaultLayout";
-
 // Import context
-import TravelsContext from "./contexts/TravelsContext"
-import travels from "./data/travels";
+import GlobalContext from "./contexts/GlobalContext"
+import trips from "./data/trips";
 
+// Import layouts
+import DefaultLayout from "./layouts/DefaultLayout";
 // Import pages
 import HomePage from "./pages/HomePage"
 import TripDetailPage from "./pages/TripDetailPage"
 import TravelerDetailPage from "./pages/TravelerDetailPage"
 
-
 function App() {
 
   // RENDER
   return (
-    <TravelsContext.Provider value={{ travels }} >
+    <GlobalContext.Provider value={{ trips }} >
 
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
-            {/* HomePage */}
             <Route index path="/" element={<HomePage />} />
             <Route path="/travel/:id" element={<TripDetailPage />} />
             <Route path="/traveler/:id" element={<TravelerDetailPage />} />
-            {/* NotFound */}
-            {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
 
-    </TravelsContext.Provider>
+    </GlobalContext.Provider>
   );
 
 }

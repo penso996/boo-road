@@ -1,31 +1,37 @@
+// Import functions from React
 import { useParams } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
-import TravelsContext from "../contexts/TravelsContext";
+import { useContext, useState, useEffect } from "react";
+
+// Import context
+import GlobalContext from "../contexts/GlobalContext";
 
 export default function TravelerDetail() {
-    const { id } = useParams(); // Ottieni l'ID dalla URL
-    const { travels } = useContext(TravelsContext); // Ottieni i dati dei viaggi
 
-    const [traveler, setTraveler] = useState(null); // Stato per memorizzare i dettagli del partecipante
+    const { trips } = useContext(GlobalContext);
+    // Read URL from ID
+    const { id } = useParams();
+
+    const [traveler, setTraveler] = useState(null);
 
     useEffect(() => {
-        // Trova il viaggio e il partecipante
-        const trip = travels.find(travel => travel.travelers.some(t => t.id === parseInt(id)));
+        // Find Trip and Traveler by ID
+        const trip = trips.find(travel => travel.travelers.some(t => t.id === parseInt(id)));
         const travelerDetail = trip?.travelers.find(t => t.id === parseInt(id));
-        setTraveler(travelerDetail); // Memorizza il partecipante trovato
-    }, [id, travels]);
+        setTraveler(travelerDetail);
+    }, [id, trips]);
 
+    // Wait to load a traveler
     if (!traveler) {
-        return <p>Caricamento...</p>; // Messaggio di caricamento nel caso i dati non siano ancora disponibili
+        return <p>Caricamento...</p>;
     }
 
+    // RENDER
     return (
         <div>
             <h1>{traveler.name} {traveler.surname}</h1>
             <p>Email: {traveler.email}</p>
             <p>Telefono: {traveler.phone}</p>
             <p>Codice Fiscale: {traveler.fiscalCode}</p>
-            {/* Aggiungi altre informazioni che vuoi mostrare */}
         </div>
     );
 }
