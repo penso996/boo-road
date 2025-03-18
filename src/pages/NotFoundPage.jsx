@@ -1,8 +1,11 @@
+// Import functions from React
 import { useNavigate } from "react-router-dom";
 
+// useNaviage to go back
 export default function NotFoundPage() {
     const navigate = useNavigate();
 
+    // RENDER
     return (
         <div className="notfound">
             <h1>Pagina non trovata</h1>
