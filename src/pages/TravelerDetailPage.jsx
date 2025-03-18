@@ -1,6 +1,7 @@
 // Import functions from React
 import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 // Import context
 import GlobalContext from "../contexts/GlobalContext";
@@ -27,11 +28,14 @@ export default function TravelerDetail() {
 
     // RENDER
     return (
-        <div>
-            <h1>{traveler.name} {traveler.surname}</h1>
-            <p>Email: {traveler.email}</p>
-            <p>Telefono: {traveler.phone}</p>
-            <p>Codice Fiscale: {traveler.fiscalCode}</p>
-        </div>
+        <main>
+            <div className="traveler-page">
+                <h1>{traveler.name} {traveler.surname}</h1>
+                <p>Email: <b>{traveler.email}</b></p>
+                <p>Telefono: <b>{traveler.phone}</b></p>
+                <p>Codice Fiscale: <b>{traveler.fiscalCode}</b></p>
+                <Link className='trip-button' to={`/trip/${id}`}>Dettagli</Link>
+            </div>
+        </main>
     );
 }
