@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import TravelsContext from "../context/TravelsContext";
+import TravelsContext from "../contexts/TravelsContext";
 import TravelerCard from "../components/TravelerCard";
 
 export default function TripDetail() {
