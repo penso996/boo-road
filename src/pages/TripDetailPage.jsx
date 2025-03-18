@@ -55,7 +55,7 @@ export default function TripDetail() {
             <h2>Partecipanti</h2>
 
             {/* searchbar */}
-            <div className="searchbar-wrapper">
+            <div>
                 <input
                     type="text"
                     value={query}
