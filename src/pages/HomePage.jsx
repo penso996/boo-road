@@ -28,8 +28,9 @@ export default function HomePage() {
     return (
         <main>
             <div className="trips-container">
-                <h1>Viaggi</h1>
+                <h1>Viaggi in corso</h1>
                 {renderTrips()}
+                <h1>Prossimi viaggi</h1>
             </div>
         </main>
     );
