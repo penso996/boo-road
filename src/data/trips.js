@@ -4,6 +4,7 @@ const trips = [
         destination: "Roma",
         startDate: "2025-03-11",
         endDate: "2025-03-21",
+        coordinator: "Luca Rossi",
         travelers: [
             { id: 1, name: "Mario", surname: "Rossi", email: "mario.rossi@mail.it", phone: "+39 06 1234567", fiscalCode: "MRORSS80A01H501U" },
             { id: 2, name: "Luca", surname: "Bianchi", email: "luca.bianchi@mail.it", phone: "+39 02 7654321", fiscalCode: "LCABNC85B02F205Z" },
@@ -22,6 +23,7 @@ const trips = [
         destination: "Milano",
         startDate: "2025-03-15",
         endDate: "2025-03-25",
+        coordinator: "Andrea Penso",
         travelers: [
             { id: 11, name: "Antonio", surname: "Esposito", email: "antonio.esposito@mail.it", phone: "+39 081 3456789", fiscalCode: "NTNSPT75D04H501Y" },
             { id: 12, name: "Elisa", surname: "Conti", email: "elisa.conti@mail.it", phone: "+39 011 2233445", fiscalCode: "ELSCTN82E05R205L" },
@@ -40,6 +42,7 @@ const trips = [
         destination: "Firenze",
         startDate: "2025-03-14",
         endDate: "2025-03-25",
+        coordinator: "Simone Icardi",
         travelers: [
             { id: 21, name: "Riccardo", surname: "Neri", email: "riccardo.neri@mail.it", phone: "+39 055 1234567", fiscalCode: "RCCNRI80A05F205X" },
             { id: 22, name: "Sara", surname: "Pellegrini", email: "sara.pellegrini@mail.it", phone: "+39 06 9876543", fiscalCode: "SRPLGR85B06H501Y" },
@@ -58,9 +61,10 @@ const trips = [
         destination: "Napoli",
         startDate: "2025-03-15",
         endDate: "2025-03-21",
+        coordinator: "Giulia Lugnan",
         travelers: [
             { id: 31, name: "Giovanni", surname: "Sorrentino", email: "giovanni.sorrentino@mail.it", phone: "+39 081 3456789", fiscalCode: "GVNSRR75D15H501X" },
-            { id: 32, name: "Isabella", surname: "D’Amico", email: "isabella.damico@mail.it", phone: "+39 011 5566778", fiscalCode: "ISBDMC82E16R205Y" },
+            { id: 32, name: "Isabella", surname: "D'Amico", email: "isabella.damico@mail.it", phone: "+39 011 5566778", fiscalCode: "ISBDMC82E16R205Y" },
             { id: 33, name: "Cristian", surname: "Ferri", email: "cristian.ferri@mail.it", phone: "+39 055 9988776", fiscalCode: "CRSFRR88F17T219M" },
             { id: 34, name: "Giada", surname: "Russo", email: "giada.russo@mail.it", phone: "+39 081 3344551", fiscalCode: "GDRSS92G18B205L" },
             { id: 35, name: "Pietro", surname: "Greco", email: "pietro.greco@mail.it", phone: "+39 06 7766554", fiscalCode: "PTRGRC88P19I205N" },
@@ -76,6 +80,7 @@ const trips = [
         destination: "Venezia",
         startDate: "2025-03-18",
         endDate: "2025-03-23",
+        coordinator: "Ginevra Longo",
         travelers: [
             { id: 41, name: "Leonardo", surname: "Piras", email: "leonardo.piras@mail.it", phone: "+39 041 1234567", fiscalCode: "LNRPRS80A25F205X" },
             { id: 42, name: "Beatrice", surname: "Sereni", email: "beatrice.sereni@mail.it", phone: "+39 06 9876543", fiscalCode: "BTRSRN85B26H501Y" },

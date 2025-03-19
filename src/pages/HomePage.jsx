@@ -20,6 +20,7 @@ export default function HomePage() {
                 destination={trip.destination}
                 startDate={trip.startDate}
                 endDate={trip.endDate}
+                coordinator={trip.coordinator}
             />
         ));
     };
