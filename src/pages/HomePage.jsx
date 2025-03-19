@@ -31,6 +31,9 @@ export default function HomePage() {
                 <h1>Viaggi in corso</h1>
                 {renderTrips()}
                 <h1>Prossimi viaggi</h1>
+                <div className="trip-card">
+                    <h2>...</h2>
+                </div>
             </div>
         </main>
     );
