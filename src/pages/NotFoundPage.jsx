@@ -7,12 +7,13 @@ export default function NotFoundPage() {
 
     // RENDER
     return (
-        <div className="notfound">
-            <h1>Pagina non trovata</h1>
-            <p>404 Not Found</p>
-            <button className="return-home" onClick={() => navigate("/")}>
-                Torna alla Home
-            </button>
-        </div>
+        <main>
+            <div className="notfound">
+                <h1>Pagina non trovata</h1>
+                <p>404 Not Found</p>
+                <a className="return-home" onClick={() => navigate("/")}>
+                    Torna alla Home</a>
+            </div>
+        </main>
     );
 }
