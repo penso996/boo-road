@@ -34,9 +34,15 @@ export default function TravelerDetail() {
         <main>
             <div className="traveler-page">
                 <h1>{traveler.name} {traveler.surname}</h1>
-                <p>Email: <b>{traveler.email}</b></p>
-                <p>Telefono: <b>{traveler.phone}</b></p>
                 <p>Codice Fiscale: <b>{traveler.fiscalCode}</b></p>
+                <p>&nbsp;</p>
+                <a href={`tel:${traveler.phone}`}>Chiama: <b>{traveler.phone}</b></a>
+                {/* testing (phone formatting doesn't work*/}
+                <a href={`https://wa.me/${traveler.phone}`} target="_blank" rel="noopener noreferrer">
+                    <b>Chatta su WhatsApp</b>
+                </a>
+                {/* testing */}
+                <a href={`mailto:${traveler.email}`}><b>Invia Email</b></a>
                 <a className="back-button" onClick={() => navigate(-1)}>Indietro</a>
             </div>
         </main>
