@@ -14,14 +14,14 @@ main {
   padding: 20px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+  background: linear-gradient(135deg, #e8d8da, #c3d8ff);
   min-height: calc(100vh - 120px);
 }
 
 /* a rules */
 a {
   text-decoration: none;
-  color: black;
+  color: #222;
 }
 
 /* HEADER */
@@ -30,15 +30,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #d4edda, #f8f9fa);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #b5e1c4, #e2e6ea);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1000;
 }
 
 header img {
   height: 80px;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
 }
 
 /* HEADER RESPONSIVE */
@@ -92,8 +92,8 @@ header img {
 
 .trips-container h1 {
   text-align: center;
-  color: #3D9970;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #2e805f;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* TripCard.jsx */
@@ -101,7 +101,7 @@ header img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px rgb(137, 137, 137, 0.2);
+  border: solid 1px rgba(100, 100, 100, 0.3);
   border-radius: 8px;
   margin-top: 15px;
   padding: 5px;
@@ -117,7 +117,7 @@ header img {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #171f38;
+  background-color: #0f172a;
   color: white;
   padding-left: 10px;
   padding-right: 10px;
@@ -125,7 +125,7 @@ header img {
 
 /* TripDetailPage.jsx */
 .trip-page {
-  border: solid 1px rgb(137, 137, 137, 0.2);
+  border: solid 1px rgba(100, 100, 100, 0.3);
   border-radius: 8px;
   padding: 5px;
   width: 70%;
@@ -166,22 +166,21 @@ header img {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 15px;
-  border: 2px solid rgba(61, 153, 112, 0.5);
+  border: 2px solid rgba(46, 128, 95, 0.7);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #333;
-  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #222;
 }
 
 .searchbar input::placeholder {
-  color: #999;
+  color: #666;
   font-style: italic;
 }
 
 /* TravelerCard.jsx */
 .traveler-card {
   height: 50px;
-  border-top: solid 1px rgb(137, 137, 137, 0.2);
+  border-top: solid 1px rgba(100, 100, 100, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -193,7 +192,7 @@ header img {
   justify-content: center;
   align-items: center;
   height: 90%;
-  background-color: #171f38;
+  background-color: #0f172a;
   color: white;
   padding-left: 10px;
   padding-right: 10px;
@@ -201,7 +200,7 @@ header img {
 
 /* TravelerDetailPage.jsx */
 .traveler-page {
-  border: solid 1px rgb(137, 137, 137, 0.2);
+  border: solid 1px rgba(100, 100, 100, 0.3);
   border-radius: 8px;
   padding: 5px;
   width: 70%;
@@ -237,10 +236,9 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #171f38;
+  background-color: #0f172a;
   color: white;
   padding: 10px;
-  cursor: pointer;
 }
 
 /* NotFoundPage.jsx */
@@ -267,8 +265,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #171f38;
+  background-color: #0f172a;
   color: white;
   padding: 10px;
-  cursor: pointer;
 }
