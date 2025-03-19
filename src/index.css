@@ -107,8 +107,8 @@ header img {
   padding: 5px;
 }
 
-.trip-card p {
-  font-weight: 600;
+.trip-card h2 {
+  margin-bottom: 10px;
 }
 
 .trip-button {
