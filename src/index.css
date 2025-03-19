@@ -78,6 +78,18 @@ header img {
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .trips-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trips-container {
+    width: 90%;
+  }
+}
+
 .trips-container h1 {
   text-align: center;
   color: #3D9970;
@@ -117,6 +129,18 @@ header img {
   border-radius: 8px;
   padding: 5px;
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .trip-page {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trip-page {
+    width: 90%;
+  }
 }
 
 .trip-page h1 {
@@ -176,10 +200,6 @@ header img {
 }
 
 /* TravelerDetailPage.jsx */
-.traveler-page h1 {
-  margin-bottom: 10px;
-}
-
 .traveler-page {
   border: solid 1px rgb(137, 137, 137, 0.2);
   border-radius: 8px;
@@ -189,6 +209,26 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .traveler-page {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .traveler-page {
+    width: 90%;
+  }
+}
+
+.traveler-page h1 {
+  margin-bottom: 10px;
+}
+
+.traveler-page p {
+  text-align: center;
 }
 
 .back-button {
