@@ -52,8 +52,9 @@ export default function TripDetail() {
         <main>
             <div className="trip-page">
                 <h1>{trip?.destination}</h1>
+                <h4>Coordinatore: {trip.coordinator}</h4>
                 <p>Dal {trip?.startDate} al {trip?.endDate}</p>
-                <h2>Partecipanti</h2>
+                <h3>Partecipanti</h3>
 
                 {/* searchbar */}
                 <div className="searchbar">

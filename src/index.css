@@ -146,15 +146,21 @@ header img {
 
 .trip-page h1 {
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.trip-page h4 {
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .trip-page p {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-style: italic;
 }
 
-.trip-page h2 {
+.trip-page h3 {
   text-align: center;
 }
 
